@@ -1,0 +1,301 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  color: #333;
+  background: linear-gradient(135deg, #4a90e2 0%, #0066cc 100%); /* Blue gradient background */
+  overflow-y: auto; /* Enable scrolling */
+  position: relative;
+  padding-bottom: 50px; /* Space for footer */
+}
+
+/* Header Styling */
+header {
+  background-color: #003366; /* Dark blue */
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #66ccff; /* Light blue */
+  transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+  padding: 50px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  color: #66ccff; /* Light blue */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-me p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #003366; /* Dark blue */
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 40px;
+  color: #1e3c72; /* Slightly darker blue */
+  text-decoration: underline;
+}
+
+/* Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+  justify-items: center;
+}
+
+.project-box {
+  padding: 40px 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.project-box a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Project box shades of blue */
+.project-box:nth-child(1) {
+  background-color: #1e3c72; /* Darker blue */
+}
+
+.project-box:nth-child(2) {
+  background-color: #0077b6; /* Medium blue */
+}
+
+.project-box:nth-child(3) {
+  background-color: #006ba6; /* Rich blue */
+}
+
+.project-box:nth-child(4) {
+  background-color: #003366; /* Very dark blue */
+}
+
+.project-box:nth-child(5) {
+  background-color: #66ccff; /* Light blue */
+}
+
+.project-box:nth-child(6) {
+  background-color: #005fa3; /* Slightly darker blue */
+}
+
+/* Hover effect */
+.project-box:hover {
+  transform: translateY(-10px);
+  background-color: #005fa3; /* Slightly darker blue */
+}
+
+/* Footer */
+footer {
+  background-color: #003366; /* Dark blue */
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Floating Images */
+.floating-image {
+  position: fixed;
+  width: 120px;
+  z-index: 1000;
+  animation: floatAround 20s ease-in-out infinite;
+}
+
+/* Animation for floating images */
+@keyframes floatAround {
+  0% {
+    left: 10%;
+    top: 10%;
+  }
+  25% {
+    left: calc(100vw - 120px); /* Move to the right edge */
+    top: 10%;
+  }
+  50% {
+    left: calc(100vw - 120px); /* Right edge */
+    top: calc(100vh - 120px); /* Move to the bottom-right corner */
+  }
+  75% {
+    left: 10%; /* Move back to the left edge */
+    top: calc(100vh - 120px); /* Bottom-left corner */
+  }
+  100% {
+    left: 10%;
+    top: 10%; /* Return to top-left corner */
+  }
+}
+
+/* Specific adjustments for each image */
+.floating-image:nth-child(1) {
+  animation-duration: 20s;
+  animation-delay: 0s;
+}
+
+.floating-image:nth-child(2) {
+  animation-duration: 22s;
+  animation-delay: 2s;
+}
+
+.floating-image:nth-child(3) {
+  animation-duration: 24s;
+  animation-delay: 4s;
+}
+
+.floating-image:nth-child(4) {
+  animation-duration: 26s;
+  animation-delay: 6s;
+}
+
+.floating-image:nth-child(5) {
+  animation-duration: 28s;
+  animation-delay: 8s;
+}
+
+.floating-image:nth-child(6) {
+  animation-duration: 30s;
+  animation-delay: 10s;
+}
+
+/* Playlist Section */
+.playlist-container {
+  padding: 50px 10%;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-container h2 {
+  font-size: 2.5rem;
+  color: #1e3c72; /* Dark blue */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.playlist {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.playlist li {
+  background-color: #0077b6; /* Medium blue */
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.playlist li:hover {
+  background-color: #005fa3; /* Darker blue */
+  transform: translateY(-5px);
+}
+
+.playlist li strong {
+  font-weight: bold;
+}
+
+/* Hover effect for song titles */
+.playlist li:hover strong {
+  color: #66ccff; /* Light blue */
+}
+
+/* Add a subtle "play" icon on hover */
+.playlist li:before {
+  content: "▶️"; /* Play button emoji */
+  margin-right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.playlist li:hover:before {
+  opacity: 1;
+}
+
+/* Additional Customization */
+.playlist-container {
+  background: linear-gradient(135deg, #66ccff, #4a90e2); /* Light blue gradient */
+  color: white;
+}
+
+.playlist li:nth-child(odd) {
+  background-color: #005b80; /* Darker blue for odd items */
+}
+
+.playlist li:nth-child(even) {
+  background-color: #0099cc; /* Lighter blue for even items */
+}
+
+/* Add some space and styling around embedded videos */
+.video-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.video-container iframe {
+  border-radius: 10px; /* Round corners for the iframe */
+  max-width: 100%; /* Makes the video responsive */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
